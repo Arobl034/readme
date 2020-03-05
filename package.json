@@ -1,0 +1,24 @@
+{
+  "name": "readme",
+  "version": "1.0.0",
+  "description": "Readme Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arobl034/readme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Arobl034/readme/issues"
+  },
+  "homepage": "https://github.com/Arobl034/readme#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "fs": "0.0.1-security",
+    "inquirer": "^7.0.6"
+  }
+}
