@@ -9,20 +9,20 @@ inquirer
   })
   .then(function({ username }) {
 
-    //You might have to change this -> response must have email and profile image
-    const queryUrl = `https://api.github.com/users/${username}/repos?per_page=100`;
+  
+    const queryUrl = `https://api.github.com/users/${username}/public_email`;
 
     axios.get(queryUrl).then(function(res) {
-      const repoNames = res.data.map(function(repo) {
-        return repo.name;
+        console.log(res)
+      const publicEmail = res.data.map(function(repo) {
+        return public_email;
       });
 
-      //Get information from github from the (res) object to retreive their email and profile image.
 
 
       const repoNamesStr = repoNames.join("\n");
 
-      fs.writeFile("repos.txt", repoNamesStr, function(err) {
+      fs.writeFile("readme.md", repoNamesStr, function(err) {
         if (err) {
           throw err;
         }
